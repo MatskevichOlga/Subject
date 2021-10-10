@@ -1,0 +1,109 @@
+/*обнуление стилей*/
+//@import "reset.scss";
+//подключаем шрифты
+@import url('https://fonts.cdnfonts.com/css/roboto');
+
+
+body{
+   font: normal 400 42px/56px 'Roboto';
+}
+.hide{
+  background: red;
+}
+.wrapper{
+    display: block;
+    width: 400px;
+    margin: 43vw auto 50px;
+    p.animation{
+       display: inline-block;
+       transition: all 1s ease-in-out;
+       opacity: 0;
+       margin: 0;
+   
+    }
+    p.animation.animationActive{
+       opacity: 1;
+    }
+   
+    svg{
+        display: inline-block;
+        margin-top: 15px;
+        margin: 0;
+        padding: 0;
+    }
+   
+}
+/*.anim-svg{
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash5 1s ease-in-out forwards;
+}
+
+@keyframes dash5 { 
+  to {
+    stroke-dashoffset: 655;
+  }
+}
+
+ .anim-n {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dash 1s ease-in-out forwards;
+  }
+  
+  @keyframes dash {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }*/
+  //анимация n при скролле вверх
+ .anim-n.animationN{
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dash1 1s ease-in-out forwards;
+  }
+
+  
+  @keyframes dash1 {      
+    to {
+      stroke-dashoffset: 489;
+    }
+  }
+
+ .animationNhidden{
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dash3 1s ease-in-out forwards reverse;
+  }
+
+  
+  @keyframes dash3 {
+     to {
+      stroke-dashoffset: 489;
+    }
+  }
+  //анимация е при скроле вверх
+ .anim-svg.animationE {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dash2 1s ease-in-out alternate forwards;
+  }
+  
+  @keyframes dash2 { 
+      to {
+        stroke-dashoffset: 655;
+      }
+    }
+    .anim-svg.animationEhidden {
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      animation: dash4 1s ease-in-out reverse forwards;
+    }
+      
+    @keyframes dash4 {
+     
+      to {
+        stroke-dashoffset: 655;
+      }
+    }
+
